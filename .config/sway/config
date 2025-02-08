@@ -3,10 +3,10 @@ exec /usr/lib/polkit-kde-authentication-agent-1
 
 # customizowanie stylu
 # exec gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
+exec mako
 exec gtk-application-prefer-dark-theme = true
-# exec gsettings set org.gnome.desktop.interface gtk-theme "Mint-Y-Dark-Blue"
+exec gsettings set org.gnome.desktop.interface gtk-theme "Mint-Y-Dark-Blue"
 exec gsettings set org.gnome.desktop.interface icon-theme "Mint-Y-Sand"
-#Default config for sway
 #
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
@@ -264,7 +264,7 @@ input type:keyboard {
 }
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
-gaps inner 10px
+gaps inner 8px
 
 default_floating_border pixel
 default_border pixel
@@ -273,3 +273,6 @@ output DP-2 position 0 0 res 1920x1200 transform 90
 workspace 1 output DP-1
 workspace 10 output DP-2
 exec swaymsg workspace 1
+exec xrandr --output DP-1 --mode 2560x1440 --pos 1200x240 --rotate normal
+exec xrandr --output DP-2 --mode 1920x1200 --pos 0x0 --rotate left
+
