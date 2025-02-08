@@ -180,7 +180,7 @@ exec swayidle -w \
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
+    bindsym $mod+n splith
     bindsym $mod+v splitv
 
     # Switch the current container between different layout styles
@@ -264,9 +264,7 @@ input type:keyboard {
 }
 
 # Inner gaps for all windows: space between two adjacent windows (or split containers).
-gaps inner 0px
-# gaps inner 5px
-# gaps inner 10px
+gaps inner 10px
 
 default_floating_border pixel
 default_border pixel
