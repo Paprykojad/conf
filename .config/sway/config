@@ -1,4 +1,5 @@
-exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec /usr/lib/polkit-kde-authentication-agent-1
 
 # customizowanie stylu
 # exec gsettings set org.gnome.desktop.interface text-scaling-factor 1.5
@@ -21,10 +22,10 @@ set $down j
 set $up k
 set $right l
 set $term alacritty
-# set $browser firefox
-set $browser flatpak run io.gitlab.librewolf-community
-set $filemanager nautilus
-# set $filemanager nemo
+set $browser firefox
+# set $browser flatpak run io.gitlab.librewolf-community
+# set $filemanager nautilus
+set $filemanager nemo
 # set $browser flatpak run com.github.Eloston.UngoogledChromium
 # set $browser flatpak run com.github.Eloston.UngoogledChromium
 # Your preferred application launcher
@@ -37,7 +38,7 @@ set $menu wofi --insensitive --show drun
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # output * bg /usr/share/backgrounds/gnome/blobs-l.svg fill
-output * bg ~/Pictures/5120x2880.png fill
+output * bg ~/Pictures/nordwall2.jpg fill
 # output * bg ~/Pictures/ring-d.jxl fill
 #
 # Example configuration:
@@ -269,4 +270,8 @@ gaps inner 0px
 
 default_floating_border pixel
 default_border pixel
-output eDP-1 scale 1.5
+output DP-1 position 1200 240 res 2560x1440 transform 0
+output DP-2 position 0 0 res 1920x1200 transform 90
+workspace 1 output DP-1
+workspace 10 output DP-2
+exec swaymsg workspace 1
