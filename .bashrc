@@ -37,6 +37,7 @@ alias gl='git log -n 10 --oneline --graph --all'
 alias gs='git status'
 alias gc='git commit'
 alias ga='git add .'
+alias gp='git push origin'
 alias up='sudo nala update && sudo nala upgrade -y && flatpak update -y'
 PS1='[\u@\h \W]\$ '
 export PATH=$PATH:$HOME/go/bin
