@@ -6,29 +6,34 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-	{
-		"context": "Workspace",
-		"bindings": {
-			// "shift shift": "file_finder::Toggle"
-		}
-	},
-	{
-		// When in insert mode and no menu is open
-		"context": "Editor && vim_mode == insert && !menu",
-		"bindings": {
-			// "j k": "vim::SwitchToNormalMode"
-		}
-	},
-	{
-		"context": "Editor && (showing_code_actions || showing_completions)",
-		"bindings": {
-			"up": "editor::ContextMenuPrevious",
-			"ctrl-p": "editor::ContextMenuPrevious",
-			"down": "editor::ContextMenuNext",
-			"tab": "editor::ContextMenuNext",
-			"ctrl-n": "editor::ContextMenuNext",
-			"pageup": "editor::ContextMenuFirst",
-			"pagedown": "editor::ContextMenuLast"
-		}
-	}
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "Workspace || Editor",
+    "bindings": {
+      "ctrl-t": "terminal_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "(Workspace || Editor)",
+    "bindings": {
+      "ctrl-j": "workspace::ToggleBottomDock"
+    }
+  },
+  {
+    "context": "(Editor && (showing_code_actions || showing_completions))",
+    "bindings": {
+      "tab": "editor::ContextMenuNext"
+    }
+  }
 ]
